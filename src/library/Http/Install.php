@@ -7,12 +7,11 @@ namespace App\Ebcms\Server\Http;
 use App\Ebcms\Admin\Http\Common;
 use App\Ebcms\Server\Traits\DirTrait;
 use Ebcms\App;
-use Exception;
-use Throwable;
 use Ebcms\Session;
-use ZipArchive;
-
+use Exception;
 use function Composer\Autoload\includeFile;
+use Throwable;
+use ZipArchive;
 
 class Install extends Common
 {
@@ -59,7 +58,7 @@ class Install extends Common
     private function unZip($file, $destination)
     {
         $zip = new ZipArchive();
-        if ($zip->open($file) !== TRUE) {
+        if ($zip->open($file) !== true) {
             throw new Exception('Could not open archive');
         }
         $zip->extractTo($destination);

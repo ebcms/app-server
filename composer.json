@@ -4,7 +4,7 @@
     "type": "ebcms-app",
     "license": "Apache-2.0",
     "require": {
-        "ebcms/admin": "1.*"
+        "ebcms/admin": "^2.0"
     },
     "extra": {
         "api": "https://www.ebcms.com/plugin/server/api"
